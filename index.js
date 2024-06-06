@@ -1,46 +1,59 @@
-//görev 1.1 ve 1.2  
+//Görev 1: Temel Matematik İşlemleri
 
-let firstname = "Tahir";
-let lastname = "mehrekule";
+let number1 = parseFloat(prompt("İlk sayıyı girin:"));
+let number2 = parseFloat(prompt("İkinci sayıyı girin:"));
+let sum = number1 + number2;
+console.log(`toplam: ${number1} + ${number2} = ${sum}`);
 
-let message = `merhaba ${firstname} ${lastname} `;
-console.log(message);
+let dif = number1 - number2;
+console.log(`fark: ${number1} - ${number2} = ${dif}`);
+
+let product = number1 * number2;
+console.log(`çarpım: ${number1} * ${number2} = ${product}`);
+
+let quotient;
+if (number2 !== 0) {
+    quotient = number1 / number2;
+    console.log(`bölüm = ${number1} - ${number2} = ${quotient}`);
+}
+else {
+    console.log("Sıfıra bölünemez.");
+}
+//Görev 2: Metin İşlemleri
 
 
-const sayı1 = 50;
-const sayı2 = 20;
-const result = sayı1 + sayı2;
-console.log(result);
+let name = (prompt("lütfen adınızı giriniz ;"))
+let genel =(`Merhaba, ${name} cümlesinde ki karakter sayısı; `);
+let  CharacterCount = genel.length;
+console.log(genel + CharacterCount);
 
-//görev 2 aslında görev 1 de göstermiş oldum
 
-//görev 3,1
 
-let sentence = "merhaba benim adım tahir";
 
-let CharacterCount = sentence.length;
+//Görev 3: Koşullu İfadeler
 
-console.log('cümlede ki karakter sayısı;',CharacterCount);
 
-//görev 3,2 
-let sentence1 = "MERHABA BENİM ADIM TAHİR";
+let number3 = parseFloat(prompt("Lütfen bir sayı giriniz:"));
+if (isNaN(number3)) {
+    console.log("Geçerli bir sayı girmediniz.");
+} else if (number3 > 0) {
+    console.log(`${number3} sayısı pozitiftir.`);
+} else if (number3 < 0) {
+    console.log(`${number3} sayısı negatiftir.`);
+} else {
+    console.log(`${number3} sayısı sıfırdır.`);
+}
 
-let lowerCaseSentence = sentence1.toLowerCase();
 
-console.log('cümlede ki kücük haftler;',lowerCaseSentence);
-
-//görev 4.1
-
-let cümle = 'İle\'nin Yazılışı';
-
-console.log(cümle);
-
-//görev 4.2 
-
-let firstname1 = "tahir";
-let surname = "mehrekule";
-let age = 21;
-let hobby = "video game";
-let introduction = `merhaba benim adım ${firstname1} soyadım ${surname} yaşım ${age} hobilerimden biriyse ${hobby} `;
-
-console.log(introduction);
+let number4 = parseFloat(prompt("Lütfen başka bir sayı giriniz:"));
+if (isNaN(number3) || isNaN(number4)) {
+    console.log("Geçerli bir sayı girmediniz.");
+} else {
+    if (number3 < number4) {
+        console.log(`${number4} sayısı ${number3} sayısından büyüktür.`);
+    } else if (number3 > number4) {
+        console.log(`${number4} sayısı ${number3} sayısından küçüktür.`);
+    } else {
+        console.log(`${number4} sayısı ${number3} sayısına eşittir.`);
+    }
+}
