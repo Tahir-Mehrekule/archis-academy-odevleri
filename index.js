@@ -1,3 +1,5 @@
+//Görev 1: Temel Matematik İşlemleri
+
 let number1 = parseFloat(prompt("İlk sayıyı girin:"));
 let number2 = parseFloat(prompt("İkinci sayıyı girin:"));
 let sum = number1 + number2;
@@ -17,11 +19,19 @@ if (number2 !== 0) {
 else {
     console.log("Sıfıra bölünemez.");
 }
+//Görev 2: Metin İşlemleri
+
 
 let name = (prompt("lütfen adınızı giriniz ;"))
 let genel =(`Merhaba, ${name} cümlesinde ki karakter sayısı; `);
 let  CharacterCount = genel.length;
 console.log(genel + CharacterCount);
+
+
+
+
+//Görev 3: Koşullu İfadeler
+
 
 let number3 = parseFloat(prompt("Lütfen bir sayı giriniz:"));
 if (isNaN(number3)) {
