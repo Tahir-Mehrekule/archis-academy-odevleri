@@ -1,46 +1,56 @@
-//görev 1.1 ve 1.2  
+let filmLKütüphanesi = new Map();
 
-let firstname = "Tahir";
-let lastname = "mehrekule";
+function filmEkle(ad, yonetmen, yayınYili){
+    let film = {ad: ad, yonetmen: yonetmen, yayınYili: yayınYili};
+    filmLKütüphanesi.set(ad, film)
+    console.log(`${ad} filmi kütüphaneye eklendi.`);
+}
 
-let message = `merhaba ${firstname} ${lastname} `;
-console.log(message);
 
+function filmListele(){
+    console.log("film kütüphanesi:");
+    for(let [ad, film] of filmLKütüphanesi){
+        console.log(`${ad} - Yönetmen: ${film.yonetmen}, Yayın yılı: ${film.yayınYili}`);
+        }
+} 
 
-const sayı1 = 50;
-const sayı2 = 20;
-const result = sayı1 + sayı2;
-console.log(result);
+function filmArA(anahtar){
+    if(filmLKütüphanesi.get(anahtar)){
+        console.log(`Film Bulundu: ${anahtar} - Yönetmen: ${film.yonetmen}, Yayın Yılı: ${film.yayınYili}`);
+            } else {
+                console.log(`${anahtar} filmi bulunamadı.`);
+}
+        }
+function filmGuncelle(ad, yeniYönetmen, yeniYayınyılı){
+    if (filmLKütüphanesi.has(ad)) {
+        let film = filmLKütüphanesi.get(ad);
+        film.yonetmen = yeniYönetmen;
+        film.yayınYili = yeniYayınyılı;
+        console.log(`${ad} filmi güncellendi.`);
+        }  else {
+            console.log(`${ad} filmi bulunamadı.`);
+        }
+    }
+    function filmSil(ad) {
+        if (filmLKütüphanesi.has(ad)) {
+            filmLKütüphanesi.delete(ad);
+            console.log(`${ad} filmi kütüphaneden silindi.`);
+        } else {
+            console.log(`${ad} filmi bulunamadı.`);
+        }
+    }
+    
 
-//görev 2 aslında görev 1 de göstermiş oldum
+filmEkle("Zincirsiz ", "Quentin Tarantino" , "2013");
+filmEkle("Pulp Fiction", "Quentin Tarantino", "1994");
+filmEkle("The Shawshank Redemption", "Frank Darabont", "1994");
+filmListele();
 
-//görev 3,1
+filmArA("Zincirsiz");
 
-let sentence = "merhaba benim adım tahir";
+filmGuncelle("Pulp Fiction", "Quentin Tarantino", "1995");
 
-let CharacterCount = sentence.length;
+filmListele();
 
-console.log('cümlede ki karakter sayısı;',CharacterCount);
-
-//görev 3,2 
-let sentence1 = "MERHABA BENİM ADIM TAHİR";
-
-let lowerCaseSentence = sentence1.toLowerCase();
-
-console.log('cümlede ki kücük haftler;',lowerCaseSentence);
-
-//görev 4.1
-
-let cümle = 'İle\'nin Yazılışı';
-
-console.log(cümle);
-
-//görev 4.2 
-
-let firstname1 = "tahir";
-let surname = "mehrekule";
-let age = 21;
-let hobby = "video game";
-let introduction = `merhaba benim adım ${firstname1} soyadım ${surname} yaşım ${age} hobilerimden biriyse ${hobby} `;
-
-console.log(introduction);
+filmSil("zincirsiz");
+filmListele();
