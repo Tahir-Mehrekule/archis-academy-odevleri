@@ -1,56 +1,90 @@
-let filmLKütüphanesi = new Map();
+ document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById("button");
+    const paragraf = document.getElementById("paragraf2");
 
-function filmEkle(ad, yonetmen, yayınYili){
-    let film = {ad: ad, yonetmen: yonetmen, yayınYili: yayınYili};
-    filmLKütüphanesi.set(ad, film)
-    console.log(`${ad} filmi kütüphaneye eklendi.`);
-}
-
-
-function filmListele(){
-    console.log("film kütüphanesi:");
-    for(let [ad, film] of filmLKütüphanesi){
-        console.log(`${ad} - Yönetmen: ${film.yonetmen}, Yayın yılı: ${film.yayınYili}`);
-        }
-} 
-
-function filmArA(anahtar){
-    if(filmLKütüphanesi.get(anahtar)){
-        console.log(`Film Bulundu: ${anahtar} - Yönetmen: ${film.yonetmen}, Yayın Yılı: ${film.yayınYili}`);
-            } else {
-                console.log(`${anahtar} filmi bulunamadı.`);
-}
-        }
-function filmGuncelle(ad, yeniYönetmen, yeniYayınyılı){
-    if (filmLKütüphanesi.has(ad)) {
-        let film = filmLKütüphanesi.get(ad);
-        film.yonetmen = yeniYönetmen;
-        film.yayınYili = yeniYayınyılı;
-        console.log(`${ad} filmi güncellendi.`);
-        }  else {
-            console.log(`${ad} filmi bulunamadı.`);
-        }
-    }
-    function filmSil(ad) {
-        if (filmLKütüphanesi.has(ad)) {
-            filmLKütüphanesi.delete(ad);
-            console.log(`${ad} filmi kütüphaneden silindi.`);
+    btn.addEventListener('click', () => {
+        if (paragraf.style.display === 'none' || paragraf.style.display === '') {
+            paragraf.style.display = 'block';
         } else {
-            console.log(`${ad} filmi bulunamadı.`);
+             paragraf.style.display = 'none';
         }
-    }
-    
 
-filmEkle("Zincirsiz ", "Quentin Tarantino" , "2013");
-filmEkle("Pulp Fiction", "Quentin Tarantino", "1994");
-filmEkle("The Shawshank Redemption", "Frank Darabont", "1994");
-filmListele();
+    });
+        }); 
 
-filmArA("Zincirsiz");
 
-filmGuncelle("Pulp Fiction", "Quentin Tarantino", "1995");
 
-filmListele();
 
-filmSil("zincirsiz");
-filmListele();
+
+            document.addEventListener('DOMContentLoaded', function() {
+            const baslik = document.getElementById('başlık1');
+            const paragraf = document.getElementById('paragraf2');
+            const btnDegistir = document.getElementById('button');
+        
+            // Başlık ve paragraf içeriğini değiştiren fonksiyon
+            function icerikDegistir() {
+                baslik.textContent = 'Yeni Başlık';
+                paragraf.textContent = 'Yeni paragraf içeriği burada olacak.';
+            }
+        
+            // Düğmeye tıklandığında icerikDegistir fonksiyonunu çağıran olay dinleyicisi
+            btnDegistir.addEventListener('click', icerikDegistir);
+        }); 
+        
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const başlık1 = document.getElementById('başlık1');
+            const başlık2 = document.getElementById('başlık2');
+            const paragraf1 = document.getElementById('paragraf1');
+            const paragraf2 = document.getElementById('paragraf2');
+            const button = document.getElementById('button');
+        
+            // Fare üzerine gelindiğinde stil değişikliği
+            başlık1.addEventListener('mouseover', function() {
+                this.style.color = 'red';
+            });
+        
+            başlık2.addEventListener('mouseover', function() {
+                this.style.color = 'blue';
+            });
+        
+            // Tıklandığında stil değişikliği
+            button.addEventListener('click', function() {
+                paragraf1.style.backgroundColor = '#f0f0f0';
+                paragraf2.style.backgroundColor = '#f0f0f0';
+            });
+        });
+
+
+
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const updateButton = document.getElementById('updateButton');
+            const textInput = document.getElementById('textInput');
+            const paragraf1 = document.getElementById('paragraf1');
+            const paragraf2 = document.getElementById('paragraf2');
+        
+
+            updateButton.addEventListener('click', function() {
+                const yeniMetin = textInput.value;
+                        paragraf1.textContent = yeniMetin;
+            });
+        });
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
