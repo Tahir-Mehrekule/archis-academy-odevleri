@@ -1,46 +1,90 @@
-//görev 1.1 ve 1.2  
+ document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById("button");
+    const paragraf = document.getElementById("paragraf2");
 
-let firstname = "Tahir";
-let lastname = "mehrekule";
+    btn.addEventListener('click', () => {
+        if (paragraf.style.display === 'none' || paragraf.style.display === '') {
+            paragraf.style.display = 'block';
+        } else {
+             paragraf.style.display = 'none';
+        }
 
-let message = `merhaba ${firstname} ${lastname} `;
-console.log(message);
+    });
+        }); 
 
 
-const sayı1 = 50;
-const sayı2 = 20;
-const result = sayı1 + sayı2;
-console.log(result);
 
-//görev 2 aslında görev 1 de göstermiş oldum
 
-//görev 3,1
 
-let sentence = "merhaba benim adım tahir";
+            document.addEventListener('DOMContentLoaded', function() {
+            const baslik = document.getElementById('başlık1');
+            const paragraf = document.getElementById('paragraf2');
+            const btnDegistir = document.getElementById('button');
+        
+            // Başlık ve paragraf içeriğini değiştiren fonksiyon
+            function icerikDegistir() {
+                baslik.textContent = 'Yeni Başlık';
+                paragraf.textContent = 'Yeni paragraf içeriği burada olacak.';
+            }
+        
+            // Düğmeye tıklandığında icerikDegistir fonksiyonunu çağıran olay dinleyicisi
+            btnDegistir.addEventListener('click', icerikDegistir);
+        }); 
+        
 
-let CharacterCount = sentence.length;
 
-console.log('cümlede ki karakter sayısı;',CharacterCount);
 
-//görev 3,2 
-let sentence1 = "MERHABA BENİM ADIM TAHİR";
 
-let lowerCaseSentence = sentence1.toLowerCase();
 
-console.log('cümlede ki kücük haftler;',lowerCaseSentence);
+        document.addEventListener('DOMContentLoaded', function() {
+            const başlık1 = document.getElementById('başlık1');
+            const başlık2 = document.getElementById('başlık2');
+            const paragraf1 = document.getElementById('paragraf1');
+            const paragraf2 = document.getElementById('paragraf2');
+            const button = document.getElementById('button');
+        
+            // Fare üzerine gelindiğinde stil değişikliği
+            başlık1.addEventListener('mouseover', function() {
+                this.style.color = 'red';
+            });
+        
+            başlık2.addEventListener('mouseover', function() {
+                this.style.color = 'blue';
+            });
+        
+            // Tıklandığında stil değişikliği
+            button.addEventListener('click', function() {
+                paragraf1.style.backgroundColor = '#f0f0f0';
+                paragraf2.style.backgroundColor = '#f0f0f0';
+            });
+        });
 
-//görev 4.1
 
-let cümle = 'İle\'nin Yazılışı';
 
-console.log(cümle);
 
-//görev 4.2 
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const updateButton = document.getElementById('updateButton');
+            const textInput = document.getElementById('textInput');
+            const paragraf1 = document.getElementById('paragraf1');
+            const paragraf2 = document.getElementById('paragraf2');
+        
 
-let firstname1 = "tahir";
-let surname = "mehrekule";
-let age = 21;
-let hobby = "video game";
-let introduction = `merhaba benim adım ${firstname1} soyadım ${surname} yaşım ${age} hobilerimden biriyse ${hobby} `;
+            updateButton.addEventListener('click', function() {
+                const yeniMetin = textInput.value;
+                        paragraf1.textContent = yeniMetin;
+            });
+        });
+        
+        
+        
 
-console.log(introduction);
+
+
+
+
+
+
+
+
+
